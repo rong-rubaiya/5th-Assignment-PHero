@@ -21,6 +21,21 @@ const callingBtns=document.querySelectorAll('.calling-btn');
 for(let callingBtn of callingBtns){
   callingBtn.addEventListener('click',()=>{
 
+    // coin deduct
+
+    let coinValue=parseInt(document.getElementById('coin-count').innerText);
+
+    if(coinValue<20){
+     return alert("❌ You do not have enough coins!");
+
+    }
+    let newCoinValue=coinValue-20;
+    
+    document.getElementById('coin-count').innerText=newCoinValue;
+
+
+    // calling alert
+       
     const nameData= callingBtn.parentNode.parentNode.children[2].innerText;
 
     const numberData=callingBtn.parentNode.parentNode.children[3].innerText
@@ -28,6 +43,11 @@ for(let callingBtn of callingBtns){
     console.log(numberData);
 
     alert(`📞 Calling ${nameData} ${numberData}...`)
+
+
+    
+
+   
 
   })
 }
