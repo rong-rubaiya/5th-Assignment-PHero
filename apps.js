@@ -47,9 +47,7 @@ for(let callingBtn of callingBtns){
     alert(`📞 Calling ${nameData} ${numberData}...`)
 
 
-    // ! asidebar--call history
-
-    const historyName=callingBtn.parentNode.parentNode.children[1].innerText;
+      const historyName=callingBtn.parentNode.parentNode.children[1].innerText;
 
     let dateNow=new Date().toLocaleTimeString();
 
@@ -85,7 +83,6 @@ clearBtn.addEventListener('click',()=>{
 })
 
 
-
 // !Copy btn
 
 let copyBtns=document.querySelectorAll(".copy-btn")
@@ -108,3 +105,24 @@ for (let copyBtn of copyBtns){
   
 
 }
+
+
+//! mobile history save:
+
+document.getElementById('btn-see').addEventListener("click", () => {
+  document.getElementById("see-div").classList.add('hidden'); // hide
+
+   document.getElementById("cards-div").classList.add('hidden'); // hide
+
+  document.getElementById('aside').classList.remove('hidden'); // show
+  document.getElementById('back-btn').classList.remove('hidden'); // show
+});
+
+
+document.getElementById("back-btn").addEventListener('click',()=>{
+  document.getElementById("see-div").classList.remove('hidden'); 
+  document.getElementById('aside').classList.add('hidden'); 
+   document.getElementById("cards-div").classList.remove('hidden'); 
+   document.getElementById('back-btn').classList.add('hidden')
+})
+
