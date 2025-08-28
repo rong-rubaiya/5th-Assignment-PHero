@@ -79,7 +79,7 @@ let clearBtn=document.getElementById("clear-btn");
 clearBtn.addEventListener('click',()=>{
   let cardCointener= document.getElementById('card-cointener');
 
-  cardCointener.remove();
+  cardCointener.innerHTML="";
 })
 
 
