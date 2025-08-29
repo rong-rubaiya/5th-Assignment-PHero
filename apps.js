@@ -5,14 +5,32 @@ const heartIcons = document.querySelectorAll('.heart-icon');
 
 for (let icon of heartIcons) {
   icon.addEventListener('click', () => {
+    
+
+
     let heartElement=document.getElementById('heart');
+
     let navHeart=parseInt(heartElement.innerText);
-    console.log(navHeart);
+    
+    if(icon.style.color==='red'){
+      icon.style.color='';
+      heartElement.innerText=navHeart-1
+    }
+
+    else{
+
+    // console.log(navHeart);
     let increase=navHeart+1;
     heartElement.innerText=increase;
-    icon.style.color='red'
+    icon.style.color='red';
+         }
+   
+
+    
   });
 }
+
+
 
 
 // !Alert
